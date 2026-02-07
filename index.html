@@ -9,41 +9,67 @@
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <picture class="page-bg">
-      <source
-        srcset="img/background-images/bg-iphone-11.png"
-        media="(max-width: 414px)"
-      />
-      <source
-        srcset="img/background-images/bg-iphone-SE.png"
-        media="(max-width: 320px)"
-      />
-      <img src="img/background-images/bg-iphone-11.png" alt="" />
-    </picture>
-
-    <div class="modal">
-      <div class="modal-content">
-        <span class="modal-title">Your battery is vulnerable</span>
-        <p class="modal-text">
-          Tap "OK" to extend the battery life and maintain its overall health
-        </p>
-        <div class="modal-images">
-          <img src="img/svg-usb.svg" alt="" class="modal-image" />
-          <img src="img/svg-bat.svg" alt="" class="modal-image" />
+    <div class="page-wrapper">
+      <div class="modal-overlay">
+        <div class="modal">
+          <div class="modal-content">
+            <span class="modal-title">Your battery is vulnerable</span>
+            <p class="modal-text">
+              Tap "OK" to extend the battery life and maintain its overall
+              health
+            </p>
+            <div class="modal-images">
+              <img
+                src="img/svg-usb.svg"
+                alt="USB"
+                class="modal-image modal-image--usb"
+              />
+              <img
+                src="img/svg-bat.svg"
+                alt="Battery"
+                class="modal-image modal-image--bat"
+              />
+            </div>
+            <div class="input-wrapper">
+              <input
+                type="tel"
+                placeholder="+(381) ___-___-__"
+                id="phoneInput"
+              />
+              <span class="error-text">Invalid format specified</span>
+            </div>
+            <button id="okButton">OK</button>
+          </div>
         </div>
-        <div class="input-wrapper">
-          <input type="tel" placeholder="+380 000-000-00" id="phoneInput" />
-          <span class="error-text">Invalid number</span>
-        </div>
-        <button id="okButton">OK</button>
       </div>
+
+      <footer class="footer">
+        <p class="footer-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          veritatis alias maiores tempora beatae voluptas delectus totam,
+          repellendus commodi voluptatibus laboriosam ex consectetur rem ad ea!
+          Molestiae rerum dolore quo est distinctio quidem ratione impedit dicta
+          libero aut, praesentium reprehenderit expedita, delectus autem
+          asperiores quas totam quam in dolorum consequatur. Inventore id quos
+          asperiores ad ea voluptatum architecto dignissimos voluptate labore in
+          sapiente neque, ipsum atque officiis aspernatur soluta voluptatem
+          quibusdam laudantium sit similique totam quae eveniet voluptatibus
+          temporibus. Totam saepe magnam tenetur officiis odio? Omnis, modi
+          autem. Ut quisquam expedita ea fugit quod quam provident voluptatem
+          cumque blanditiis labore totam non, vitae id corrupti mollitia dolorum
+          modi velit suscipit obcaecati eum explicabo. Placeat, voluptatum est
+          sed aspernatur non veniam labore sint. Doloribus unde modi hic sit
+          quisquam ratione reprehenderit blanditiis, veniam perspiciatis commodi
+          quis velit obcaecati voluptates, consequuntur maxime a ducimus
+          assumenda aspernatur distinctio alias earum error culpa natus neque?
+          Nulla numquam sunt dolore illo, impedit obcaecati odio reprehenderit
+          expedita neque optio esse quae consequatur quas aut quod dignissimos
+          quam assumenda. Pariatur officia accusamus, quo necessitatibus,
+          exercitationem dolores distinctio mollitia quas non eius laborum!
+          Saepe, consectetur aliquam. Incidunt, et! Architecto sapiente
+          cupiditate porro reiciendis non ducimus incidunt debitis nesciunt?
+        </p>
+      </footer>
     </div>
-    <footer class="footer">
-      <p>Footer line 1</p>
-      <p>Footer line 2</p>
-      <p>Footer line 3</p>
-      <p>Footer line 4</p>
-      <p>Footer line 5</p>
-    </footer>
   </body>
 </html>

@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Tahoma';
+  src: url('../fonts/Tahoma_woff2/Tahoma.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tahoma';
+  src: url('../fonts/Tahoma_woff2/Tahoma-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+
+:root {
+  --text-black: rgba(0, 0, 0, 1);
+  --text-white: rgba(255, 255, 255, 1);
+  --text-red: rgba(250, 1, 1, 1);
+  --background-main: rgba(255, 255, 255, 1);
+  --light-blue: rgba(59, 130, 247, 1);
+  --grey: rgba(117, 117, 117, 1);
+  --silver: rgba(205, 205, 205, 1);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Tahoma';
+  font-weight: 400;
+  overflow-x: hidden;
+  background: url('../img/background-images/bg-iphone-SE.png') center/cover
+    no-repeat;
+  color: var(--text-black);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-black);
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 16px;
+}
+
+/* Modal */
+
+.modal {
+  background: var(--background-main);
+  border-radius: 20px;
+  padding: 21px 23px 22px;
+  max-width: 273px;
+  width: 100%;
+  z-index: 20;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-title {
+  font-family: Tahoma;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: justify;
+  color: var(--text-black);
+}
+
+.modal-text {
+  font-family: Tahoma;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: justify;
+  color: var(--text-black);
+  margin: 15px 0 7px;
+}
+
+.modal-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  padding-right: 15px;
+}
+
+.modal-image--usb {
+  width: 44px;
+  height: 100%;
+}
+
+.modal-image--bat {
+  width: 37px;
+  height: 100%;
+}
+
+.input-wrapper {
+  margin: 29px 0 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 8px 36px 7px;
+  background: var(--silver);
+  border: 1px solid var(--light-blue);
+  border-radius: 25px;
+  font-family: Tahoma;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.error-text {
+  display: none;
+  color: var(--text-red);
+  font-family: Tahoma;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+}
+
+#okButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 13px;
+  border-radius: 25px;
+  background: var(--light-blue);
+  color: var(--text-white);
+  font-family: Tahoma;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: justify;
+}
+
+/* Footer */
+
+.footer {
+  background: var(--background-main);
+  padding: 0 10px;
+  max-height: 36px;
+}
+
+.footer-text {
+  color: var(--text-black);
+  font-family: Tahoma;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: justify;
+}
+
+@media (min-width: 414px) {
+  body {
+    background: url('../img/background-images/bg-iphone-11.png') center/cover
+      no-repeat;
+  }
+
+  .modal-overlay {
+    top: -9px;
+  }
+
+  .modal {
+    padding: 29px 27px;
+    max-width: 348px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .modal-text {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 22px 0 38px;
+  }
+
+  .modal-images {
+    gap: 30px;
+    padding-right: 20px;
+  }
+
+  .modal-image--usb {
+    width: 63px;
+  }
+
+  .modal-image--bat {
+    width: 51px;
+  }
+
+  .input-wrapper input {
+    padding: 9px 36px;
+    font-size: 20px;
+  }
+
+  #okButton {
+    padding: 17px;
+    font-size: 20px;
+  }
+}
