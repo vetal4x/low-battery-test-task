@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Low Battery</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <picture class="page-bg">
+      <source
+        srcset="img/background-images/bg-iphone-11.png"
+        media="(max-width: 414px)"
+      />
+      <source
+        srcset="img/background-images/bg-iphone-SE.png"
+        media="(max-width: 320px)"
+      />
+      <img src="img/background-images/bg-iphone-11.png" alt="" />
+    </picture>
+
+    <div class="modal">
+      <div class="modal-content">
+        <span class="modal-title">Your battery is vulnerable</span>
+        <p class="modal-text">
+          Tap "OK" to extend the battery life and maintain its overall health
+        </p>
+        <div class="modal-images">
+          <img src="img/svg-usb.svg" alt="" class="modal-image" />
+          <img src="img/svg-bat.svg" alt="" class="modal-image" />
+        </div>
+        <div class="input-wrapper">
+          <input type="tel" placeholder="+380 000-000-00" id="phoneInput" />
+          <span class="error-text">Invalid number</span>
+        </div>
+        <button id="okButton">OK</button>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>Footer line 1</p>
+      <p>Footer line 2</p>
+      <p>Footer line 3</p>
+      <p>Footer line 4</p>
+      <p>Footer line 5</p>
+    </footer>
+  </body>
+</html>
