@@ -121,6 +121,11 @@ button {
   color: var(--text-black);
 }
 
+.modal-title--pin {
+  display: block;
+  text-align: center;
+}
+
 .modal-text {
   font-family: Tahoma;
   font-size: 16px;
@@ -271,9 +276,17 @@ button {
     max-width: 348px;
   }
 
+  .modal--pin {
+    padding: 29px 23px;
+  }
+
   .modal-title {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .modal-title--pin {
+    font-size: 18px;
   }
 
   .modal-text {
