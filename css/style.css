@@ -25,8 +25,12 @@
   --text-red: rgba(250, 1, 1, 1);
   --background-main: rgba(255, 255, 255, 1);
   --light-blue: rgba(59, 130, 247, 1);
+  --blue: rgba(47, 104, 198, 1);
+  --dark-blue: rgba(35, 78, 148, 1);
   --grey: rgba(117, 117, 117, 1);
+  --light-grey: rgba(189, 190, 191, 1);
   --silver: rgba(205, 205, 205, 1);
+  --red: rgba(239, 52, 52, 1);
 }
 
 html {
@@ -165,7 +169,35 @@ button {
   line-height: 12px;
   text-align: center;
   outline: none;
-  transition: border 0.2s;
+  color: var(--grey);
+  transition:
+    border 0.3s ease,
+    background 0.3s ease;
+}
+
+.input-wrapper input:focus {
+  background: var(--background-main);
+}
+
+.input-wrapper input:disabled {
+  background: var(--background-main);
+  border-color: var(--red);
+}
+
+.input-wrapper.error input {
+  border-color: var(--red);
+}
+
+.error-text {
+  display: none;
+  color: var(--red);
+  font-size: 12px;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.input-wrapper.error .error-text {
+  display: block;
 }
 
 .error-text {
@@ -192,6 +224,19 @@ button {
   font-weight: 400;
   line-height: 12px;
   text-align: justify;
+  transition: background 0.3s ease;
+}
+
+#okButton:hover {
+  background: var(--blue);
+}
+
+#okButton:active {
+  background: var(--dark-blue);
+}
+
+#okButton:disabled {
+  background: var(--light-grey);
 }
 
 /* Footer */
